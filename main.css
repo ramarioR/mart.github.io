@@ -36,6 +36,12 @@ body {
     animation: title 2s linear 1s forwards;
 }
 
+@media (max-width: 500px) {
+    .title {
+        font-size: 48px;
+    }
+}
+
 
 .bot_box {
     display: flex;
