@@ -98,6 +98,8 @@ body {
     font-size: 64px;
     line-height: 1;
 
+    will-change: top;
+
     /* background: #000;0 */
 }
 
