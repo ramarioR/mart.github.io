@@ -1,0 +1,132 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: #ffdfda;
+    overflow: hidden;
+}
+
+
+.title {
+    position: relative;
+    z-index: 1;
+
+    font-family: 'Lobster', cursive;
+    font-size: 64px;
+    font-weight: 400;
+
+    transform: scale(0) rotateZ(0deg);
+
+    animation: title 2s linear 1s forwards;
+}
+
+
+.bot_box {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+
+    width: 500px;
+    height: 300px;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    transform: translate3d(52%, 52%, 0) rotate(-45deg);
+
+    background: #ff6047;
+
+    padding-top: 35px;
+}
+
+
+.text {
+    font-family: 'Lobster', cursive;
+    font-size: 22px;
+    font-weight: 400;
+
+    color: #fff;
+    
+    /* position: absolute;
+    right: 20px;
+    bottom: 80px; */
+}
+
+.anim_wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    opacity: .7;
+
+    color: #212121;
+
+    overflow: hidden;
+}
+
+.anim_image {
+    position: absolute;
+
+    width: 64px;
+    height: 64px;
+
+    font-size: 64px;
+    line-height: 1;
+
+    /* background: #000;0 */
+}
+
+@keyframes title {
+    0% {
+        transform: scale(0) rotateZ(0deg);
+    }
+    10% {
+        transform: scale(.1) rotateZ(360deg);
+    }
+    20% {
+        transform: scale(.2) rotateZ(720deg);
+    }
+    30% {
+        transform: scale(.3) rotateZ(1080deg);
+    }
+    40% {
+        transform: scale(.4) rotateZ(1440deg);
+    }
+    50% {
+        transform: scale(.5) rotateZ(1800deg);
+    }
+    60% {
+        transform: scale(.6) rotateZ(2160deg);
+    }
+    70% {
+        transform: scale(.7) rotateZ(2520deg);
+    }
+    80% {
+        transform: scale(.8) rotateZ(2880deg);
+    }
+    90% {
+        transform: scale(.9) rotateZ(3220deg);
+    }
+    100% {
+        transform: scale(1) rotateZ(3600deg);
+    }
+}
