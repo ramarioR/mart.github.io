@@ -1,5 +1,7 @@
 const root = document.getElementById('root');
+const isMobile = window.matchMedia('(max-width: 500px)').matches
 
+console.log(isMobile);
 
 root.innerHTML = `<div class="anim_wrapper"></div>`
 root.innerHTML = root.innerHTML + `<h1 class="title">C 8 марта!</h1>`
@@ -9,6 +11,7 @@ root.innerHTML = root.innerHTML + `<div class="bot_box"><p class="text">От Б�
 const renderAnimation = () => {
     const wrapper = root.querySelector('.anim_wrapper')
     const items = []
+    const interval = isMobile ? 32 : 16
     let timer = 0
 
     const getEl = (el) => {
@@ -54,7 +57,7 @@ const renderAnimation = () => {
     }
 
     setInterval( _ => {
-        timer += 16;
+        timer += interval;
 
         items.forEach( item => {
             // console.log(item.rotate);
@@ -64,12 +67,12 @@ const renderAnimation = () => {
             item.el.style.transform = `rotateZ(${item.rotate >= 1? item.rotateDeg = item.rotateDeg + 0.5 : item.rotateDeg = item.rotateDeg - 0.5}deg)`
         })
 
-        if (timer / 16 > 5) {
+        if (timer / interval > isMobile ? 10 : 5) {
             timer = 0
 
             items.push(createItem())
         }
-    }, 16)
+    }, interval)
 }
 
 renderAnimation();
