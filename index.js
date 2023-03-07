@@ -11,7 +11,7 @@ root.innerHTML = root.innerHTML + `<div class="bot_box"><p class="text">От Б�
 const renderAnimation = () => {
     const wrapper = root.querySelector('.anim_wrapper')
     const items = []
-    const interval = isMobile ? 32 : 16
+    const interval = 16
     let timer = 0
 
     const getEl = (el) => {
@@ -67,7 +67,8 @@ const renderAnimation = () => {
             item.el.style.transform = `rotateZ(${item.rotate >= 1? item.rotateDeg = item.rotateDeg + 0.5 : item.rotateDeg = item.rotateDeg - 0.5}deg)`
         })
 
-        if (timer / interval > isMobile ? 50 : 5) {
+        console.log(isMobile);
+        if (timer / interval > (isMobile ? 15 : 5)) {
             timer = 0
 
             items.push(createItem())
