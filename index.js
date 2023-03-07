@@ -67,7 +67,7 @@ const renderAnimation = () => {
             item.el.style.transform = `rotateZ(${item.rotate >= 1? item.rotateDeg = item.rotateDeg + 0.5 : item.rotateDeg = item.rotateDeg - 0.5}deg)`
         })
 
-        if (timer / interval > isMobile ? 10 : 5) {
+        if (timer / interval > isMobile ? 50 : 5) {
             timer = 0
 
             items.push(createItem())
