@@ -63,8 +63,8 @@ const renderAnimation = () => {
             // console.log(item.rotate);
             item.iteration = 100;
             item.posY += item.iteration / 216;
-            item.el.style.top = `${item.posY}%`
-            item.el.style.transform = `rotateZ(${item.rotate >= 1? item.rotateDeg = item.rotateDeg + 0.5 : item.rotateDeg = item.rotateDeg - 0.5}deg)`
+            // item.el.style.top = `${item.posY}%`
+            item.el.style.transform = `translate3d(${item.posX}%, ${item.posY}%, 0) rotateZ(${item.rotate >= 1? item.rotateDeg = item.rotateDeg + 0.5 : item.rotateDeg = item.rotateDeg - 0.5}deg)`
         })
 
         console.log(isMobile);
