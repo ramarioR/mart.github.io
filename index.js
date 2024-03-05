@@ -40,7 +40,7 @@ const renderAnimation = () => {
                 el.textContent = '🌹'
                 break;
             case 5: 
-                el.textContent = '🐏'
+                el.textContent = '🦊'
                 break;
         }
 
