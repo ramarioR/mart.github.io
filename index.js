@@ -21,11 +21,11 @@ const renderAnimation = () => {
     const createItem = () => {
         const posX = Math.random() * (100 - 0) + 0
         const el = document.createElement('div')
-        const emojiNUm = Math.floor(Math.random() * (4.4 - 0) + 0)
+        const emojiNUm = Math.floor(Math.random() * (5.4 - 0) + 0)
 
         switch(emojiNUm) {
             case 0:
-                el.textContent = '🐑'
+                el.textContent = '❤️'
                 break;
             case 1:
                 el.textContent = '❤️'
@@ -37,6 +37,9 @@ const renderAnimation = () => {
                 el.textContent = '🍓'
                 break;
             case 4: 
+                el.textContent = '🌹'
+                break;
+            case 5: 
                 el.textContent = '🐏'
                 break;
         }
@@ -68,7 +71,7 @@ const renderAnimation = () => {
         })
 
         console.log(isMobile);
-        if (timer / interval > (isMobile ? 20 : 5)) {
+        if (timer / interval > (isMobile ? 20 : 4)) {
             timer = 0
 
             items.push(createItem())
