@@ -5,7 +5,7 @@ console.log(isMobile);
 
 root.innerHTML = `<div class="anim_wrapper"></div>`
 root.innerHTML = root.innerHTML + `<h1 class="title">C 8 марта!</h1>`
-root.innerHTML = root.innerHTML + `<div class="bot_box"><p class="text">От Барашка</p></div>`
+root.innerHTML = root.innerHTML + `<div class="bot_box"><p class="text">От Димы</p></div>`
 
 
 const renderAnimation = () => {
